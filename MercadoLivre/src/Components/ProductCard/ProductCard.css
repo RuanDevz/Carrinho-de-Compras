@@ -62,6 +62,7 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  padding-top: 15px;
 }
 
 .button-addcart:hover {

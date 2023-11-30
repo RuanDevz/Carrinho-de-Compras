@@ -2,16 +2,14 @@
 import React from 'react'
 import '../Header/Header.css'
 import './Header.css'
-import SearchBar from '../Forms/SearchBar'
 import Cardbutton from '../CardButton/Cardbutton'
-
-
+import SearchBar from '../Forms/Input'
 
 const Header = () => {
   return (
     <header className='header'>
       <div className='container'>
-        <SearchBar type='text' placeholder='Buscar Itens' />
+        <SearchBar />
         <Cardbutton />
       </div>
     </header>

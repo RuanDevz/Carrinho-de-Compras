@@ -21,3 +21,12 @@
   transform: translateY(5px);
   transition: 200ms;
  }
+
+ input{
+  width: 500px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}

@@ -1,19 +1,41 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react'
-import './inputsearch.css'
+import React, { useState, useContext } from 'react';
+import { BsSearch } from 'react-icons/bs';
+import fetchProducts from '../../api/FetchProduts';
+import './Forms.css'
 
-// eslint-disable-next-line react/prop-types
-const Input = ({type,placeholder,}) => {
+function SearchBar() {
 
-  const [search, setSearch] = useState('')
+  const { setProducts, setLoading } = useState(false);
+  const [searchValue, setSearchValue] = useState('');
 
+  const handleSearch = async (event) => {
+    event.preventDefault();
+    setLoading(true);
 
+    const products = await fetchProducts(searchValue);
+
+    setProducts(products);
+    setLoading(false);
+    setSearchValue('');
+  };
 
   return (
-    <div className='input-search'>
-      <input value={search} type={type} placeholder={placeholder} onChange={(e => setSearch(e.target.value))} required />
-    </div>
-  )
+    <form className="search-bar" onSubmit={handleSearch}>
+      {name}
+      <input
+        type="search"
+        value={searchValue}
+        placeholder="Buscar produtos"
+        className="search__input"
+        onChange={ ({ target }) => setSearchValue(target.value) }
+      />
+
+      <button type="submit" className="button-search">
+        <BsSearch />
+      </button>
+    </form>
+  );
 }
 
-export default Input
+export default SearchBar;
