@@ -3,10 +3,11 @@ import React, { useState, useContext } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import fetchProducts from '../../api/FetchProduts';
 import './Forms.css'
+import AppContext from '../../../../context/AppContext';
 
 function SearchBar() {
 
-  const { setProducts, setLoading } = useState(false);
+  const { setProducts, setLoading } = useContext(AppContext);
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearch = async (event) => {
@@ -29,6 +30,7 @@ function SearchBar() {
         placeholder="Buscar produtos"
         className="search__input"
         onChange={ ({ target }) => setSearchValue(target.value) }
+        required
       />
 
       <button type="submit" className="button-search">

@@ -1,34 +1,32 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState, } from 'react'
+import React, { useContext, useEffect, useState, } from 'react'
 import './Products.css'
-import FetchProduts from '../../api/FetchProduts'
 import ProductCard from '../ProductCard/ProductCard'
 import Loading from '../Loading/Loading'
+import AppContext from '../../../../context/AppContext'
+import fetchProducts from '../../api/FetchProduts'
 
 
-const Products = () => {
+function Products() {
 
-  // eslint-disable-next-line no-undef
-  const [products, setProducts] = useState('')
-  const [loading, setLoading] = useState(true)
+  const { products, setProducts, loading, setLoading } = useContext(AppContext);
+  
 
-  useEffect(() =>{
+  useEffect(() => {
+    fetchProducts('iphone').then((response) => {
+      setProducts(response);
+      setLoading(false);
+    });
+  }, []);
 
-    FetchProduts('Whey Protein').then((resp) =>{
-      setProducts(resp)
-      setLoading(false)
-    })
-
-    console.log(products)
-
-  },[])
   return (
     (loading && <Loading /> ) || (
       <section className="products container">
         {products.map((product) => <ProductCard key={product.id} data={product} />)}
       </section>
     )
-  )
+    
+  );
 }
 
-export default Products
+export default Products;
