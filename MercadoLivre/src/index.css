@@ -18,3 +18,24 @@ body
   max-width: 1500px;
   margin: 0 auto;
 }
+
+/* Para navegadores WebKit (Chrome, Safari) */
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+/* Estilo do polegar (a parte arrastável) */
+::-webkit-scrollbar-thumb {
+  background-color: #fff159; /* Cor do polegar */
+  border-radius: 6px; /* Borda arredondada do polegar */
+}
+
+/* Estilo da trilha (a área não arrastável) */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Cor da trilha */
+  border-radius: 6px; /* Borda arredondada da trilha */
+scrollbar-width: thin;
+scrollbar-color: #fff159 #f1f1f1;
+
+}
