@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useContext } from 'react';
-import { BsSearch } from 'react-icons/bs';
+import { FaSearch } from "react-icons/fa";
+
 import fetchProducts from '../../api/FetchProduts';
 import './Forms.css'
 import AppContext from '../../../../context/AppContext';
@@ -23,7 +24,6 @@ function SearchBar() {
 
   return (
     <form className="search-bar" onSubmit={handleSearch}>
-      {name}
       <input
         type="search"
         value={searchValue}
@@ -34,7 +34,7 @@ function SearchBar() {
       />
 
       <button type="submit" className="button-search">
-        <BsSearch />
+        <FaSearch />
       </button>
     </form>
   );
