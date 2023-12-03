@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Components/Header/Header';
 import Products from './Components/Products/Products';
 import Provider from '../../context/Provider';
+import Cart from './Components/Cart/Cart';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Provider>
       <Header />
       <Products />
+      <Cart />
       </Provider>
     </div>
   )
