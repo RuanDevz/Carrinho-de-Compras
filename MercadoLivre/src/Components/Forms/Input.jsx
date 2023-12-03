@@ -29,7 +29,7 @@ function SearchBar() {
         value={searchValue}
         placeholder="Buscar produtos"
         className="search__input"
-        onChange={ ({ target }) => setSearchValue(target.value) }
+        onChange={ (e) => setSearchValue(e.target.value) }
         required
       />
 

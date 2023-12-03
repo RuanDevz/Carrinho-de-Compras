@@ -145,11 +145,3 @@
  .loader-square:nth-of-type(7) {
   animation-delay: -10s;
  }
-
- @media only screen and (max-width: 600px) {
-  body {
-    font-size: 14px;
-  }
-
-
-}

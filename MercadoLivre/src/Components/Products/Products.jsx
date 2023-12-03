@@ -13,11 +13,11 @@ function Products() {
   
 
   useEffect(() => {
-    fetchProducts('iphone').then((response) => {
+    fetchProducts('creatina').then((response) => {
       setProducts(response);
       setLoading(false);
     });
-  }, []);
+  },[]);
 
   return (
     (loading && <Loading /> ) || (
