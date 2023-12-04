@@ -9,14 +9,13 @@ const ProductCard = ({ data }) => {
   // eslint-disable-next-line react/prop-types
   const { title, price, thumbnail } = data;
 
-  // Destructure from AppContext using the correct naming convention
   const { cartItems, setCartItems } = useContext(AppContext);
 
   const AddToCart = () => {
-    // Create a new array with the existing cartItems and the new item
+
     const updatedCartItems = [...cartItems, data];
     
-    // Update the state with the new array
+ 
     setCartItems(updatedCartItems);
   };
   
@@ -32,7 +31,6 @@ const ProductCard = ({ data }) => {
           style: 'currency',
           currency: 'BRL',
         })}</h3>
-        <p className='card-description'>Descrição do produto</p>
       </div>
       <button  onClick={AddToCart} type='button' className='button-addcart'>
         <FaCartPlus />

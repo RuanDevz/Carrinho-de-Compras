@@ -1,5 +1,4 @@
 .button-search {
-  padding: 10px 20px;
   border-radius: 2px;
   border: 0;
   background-color: #fff159;
@@ -29,7 +28,7 @@
  }
 
  input{
-  width: 500px;
+  width: 600px;
   padding: 10px;
   outline: none;
   border: none;
@@ -43,14 +42,14 @@ body {
 }
 
 /* Media query para dispositivos móveis */
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 740px) {
   body {
     font-size: 14px;
   }
 
   input
   {
-    width: 260px;
+    width: 360px;
   }
 
   .search-bar

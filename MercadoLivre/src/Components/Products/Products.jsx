@@ -13,7 +13,7 @@ function Products() {
   
 
   useEffect(() => {
-    fetchProducts('creatina').then((response) => {
+    fetchProducts().then((response) => {
       setProducts(response);
       setLoading(false);
     });
