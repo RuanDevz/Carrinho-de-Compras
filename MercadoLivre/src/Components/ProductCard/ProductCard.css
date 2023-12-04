@@ -37,7 +37,8 @@
 .card-description
 {
   text-align: center;
-  color: #cacaca;
+  color: #bebebe;
+  font-size: 1em;
 }
 .button-addcart{
   position: absolute;
