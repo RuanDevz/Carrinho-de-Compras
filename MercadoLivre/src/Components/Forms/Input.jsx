@@ -11,6 +11,7 @@ function SearchBar() {
   const { setProducts, setLoading } = useContext(AppContext);
   const [searchValue, setSearchValue] = useState('');
 
+
   const handleSearch = async (event) => {
     event.preventDefault();
     setLoading(true);
@@ -20,6 +21,7 @@ function SearchBar() {
     setProducts(products);
     setLoading(false);
     setSearchValue('');
+    console.log(products)
   };
 
   return (
