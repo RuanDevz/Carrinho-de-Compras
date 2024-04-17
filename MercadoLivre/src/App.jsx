@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from './Components/Header/Header';
 import Products from './Components/Products/Products';
-import Provider from '../../context/Provider';
+import Provider from '../context/Provider';
 import Cart from './Components/Cart/Cart';
 
 const App = () => {
