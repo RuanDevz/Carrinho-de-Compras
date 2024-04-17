@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 
 import fetchProducts from '../../api/FetchProduts';
 import './Forms.css'
-import AppContext from '../../../../context/AppContext';
+import AppContext from '../../../context/AppContext';
 
 function SearchBar() {
 
