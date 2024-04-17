@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import './ProductCard.css';
 import { FaCartPlus } from 'react-icons/fa';
 import PropTypes from 'prop-types';
-import AppContext from '../../../../context/AppContext';
+import AppContext from '../../../context/AppContext';
 
 const ProductCard = ({ data }) => {
   // eslint-disable-next-line react/prop-types

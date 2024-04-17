@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import './Cardbutton.css';
 import { FaShoppingCart } from 'react-icons/fa';
-import AppContext from '../../../../context/AppContext';
+import AppContext from '../../../context/AppContext';
 
 const Cardbutton = () => {
   const { cartItems, setCartVisible, cartVisible } = useContext(AppContext);

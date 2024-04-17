@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import './Cart.css';
 import CartItems from '../CartItems/CartItems';
-import AppContext from '../../../../context/AppContext';
+import AppContext from '../../../context/AppContext';
 
 const Cart = () => {
   const { cartItems, cartVisible, } = useContext(AppContext);
